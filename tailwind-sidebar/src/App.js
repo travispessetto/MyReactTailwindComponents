@@ -4,11 +4,14 @@ import TailwindSidebar from './navigation/tailwindSidebar';
 import TailwindSidebarLink from './navigation/tailwindSidebarLink';
 import TailwindSidebarToggleButton from './navigation/tailwindSidebarToggleButton';
 import TailwindSidebarSubMenu from './navigation/tailwindSidebarSubMenu';
-import { FaGoogle, FaYahoo, FaEnvelope } from "react-icons/fa";
+import { FaGoogle, FaYahoo, FaEnvelope, FaRegUserCircle, FaCog } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
 import TailwindLogoHeaderBar from './layout/tailwindLogoHeaderBar';
 import TailwindMainArea from './layout/tailwindMainArea';
+import { TailwindRightSidebarProvider } from './navigation/tailwindRightSidebarContext';
+import TailwindRightSidebarToggleButton from './navigation/tailwindRightSidebarToggleButton';
+import TailwindRightSidebar from './navigation/tailwindRightSidebar';
 
 
 
@@ -16,6 +19,7 @@ function App() {
   return (
     <div className='min-h-screen flex'>
       <TailwindSidebarProvider>
+        <TailwindRightSidebarProvider>
         <TailwindSidebar>
           <TailwindSidebarLink href='https://google.com' target="_blank"><FaGoogle className='text-4xl'/>&nbsp;Google</TailwindSidebarLink>
           <TailwindSidebarLink href='https://yahoo.com'><FaYahoo className='text-4xl' />&nbsp;Yahoo</TailwindSidebarLink>
@@ -25,8 +29,14 @@ function App() {
           </TailwindSidebarSubMenu>
         </TailwindSidebar>
         <TailwindMainArea>
-          <TailwindLogoHeaderBar left={<TailwindSidebarToggleButton />} logoUrl={'/images/logo.png'} />
+          <TailwindLogoHeaderBar left={<TailwindSidebarToggleButton />} right={<TailwindRightSidebarToggleButton icon={<FaRegUserCircle />} />} logoUrl={'/images/logo.png'} />
         </TailwindMainArea>
+        <TailwindRightSidebar>
+          <TailwindSidebarSubMenu display={<><FaCog />&nbsp;Settings</>}>
+
+          </TailwindSidebarSubMenu>
+        </TailwindRightSidebar>
+        </TailwindRightSidebarProvider>
       </TailwindSidebarProvider>
     </div>
   );

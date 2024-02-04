@@ -2,7 +2,7 @@ import React from 'react';
 
 function TailwindMainArea({children})
 {
-    return (<div className="flex flex-col min-h-screen w-full">
+    return (<div className="flex flex-col min-h-full w-full">
         {children}
     </div>);
 };
