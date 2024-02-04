@@ -49,8 +49,8 @@ function TailwindSidebar({ children }) {
 
   return (
     <div className={`flex flex-col bg-white border-r min-h-screen max-h-screen transition-width duration-500 ease-in-out ${isSidebarVisible ? 'w-96' : 'w-0'} max-w-full fixed lg:relative top-0 left-0 h-full z-index-50`} ref={sidebarRef}>
-      <div className={`flex justify-end border-b py-4`}>
-        <button className={`mr-2 text-4xl`} onClick={toggleVisibility}><IoMdClose className='text-4xl'/></button>
+      <div className={`flex justify-end border-b h-16`}>
+        <button className={`mr-2`} onClick={toggleVisibility}><IoMdClose className='text-4xl'/></button>
       </div>
       <div className='flex flex-col flex-grow overflow-y-auto'>
         <div className={`${isTransitioning ? 'overflow-x-hidden' : ''} ${isSidebarVisible || isTransitioning ? '' : 'hidden'}`}>

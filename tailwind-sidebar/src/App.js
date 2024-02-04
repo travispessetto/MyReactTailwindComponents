@@ -7,6 +7,8 @@ import TailwindSidebarSubMenu from './navigation/tailwindSidebarSubMenu';
 import { FaGoogle, FaYahoo, FaEnvelope } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { PiMicrosoftOutlookLogo } from "react-icons/pi";
+import TailwindLogoHeaderBar from './layout/tailwindLogoHeaderBar';
+import TailwindMainArea from './layout/tailwindMainArea';
 
 
 
@@ -22,9 +24,9 @@ function App() {
             <TailwindSidebarLink href="https://outlook.com"><PiMicrosoftOutlookLogo className='text-4xl' />&nbsp;Outlook</TailwindSidebarLink>
           </TailwindSidebarSubMenu>
         </TailwindSidebar>
-        <div>
-          <TailwindSidebarToggleButton />
-        </div>
+        <TailwindMainArea>
+          <TailwindLogoHeaderBar left={<TailwindSidebarToggleButton />} logoUrl={'/images/logo.png'} />
+        </TailwindMainArea>
       </TailwindSidebarProvider>
     </div>
   );
