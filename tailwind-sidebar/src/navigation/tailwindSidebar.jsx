@@ -54,7 +54,9 @@ function TailwindSidebar({ children }) {
       </div>
       <div className='flex flex-col flex-grow overflow-y-auto'>
         <div className={`${isTransitioning ? 'overflow-x-hidden' : ''} ${isSidebarVisible || isTransitioning ? '' : 'hidden'}`}>
-          {children}
+          <div className={`${isTransitioning ? 'w-96 w-max-screen' : ''}`}>
+            {children}
+          </div>
         </div>
       </div>
     </div>
