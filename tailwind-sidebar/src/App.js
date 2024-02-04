@@ -17,7 +17,7 @@ function App() {
     <div className='min-h-screen flex'>
       <TailwindSidebarProvider>
         <TailwindSidebar>
-          <TailwindSidebarLink href='https://google.com'><FaGoogle className='text-4xl' />&nbsp;Google</TailwindSidebarLink>
+          <TailwindSidebarLink href='https://google.com' target="_blank"><FaGoogle className='text-4xl'/>&nbsp;Google</TailwindSidebarLink>
           <TailwindSidebarLink href='https://yahoo.com'><FaYahoo className='text-4xl' />&nbsp;Yahoo</TailwindSidebarLink>
           <TailwindSidebarSubMenu display={<><FaEnvelope className='text-4xl' />&nbsp;Email Providers</>}>
             <TailwindSidebarLink href="https://gmail.com"><BiLogoGmail className='text-4xl'/>&nbsp;Gmail</TailwindSidebarLink>
