@@ -33,7 +33,7 @@ function App() {
         </TailwindMainArea>
         <TailwindRightSidebar>
           <TailwindSidebarSubMenu display={<><FaCog />&nbsp;Settings</>}>
-
+            <TailwindSidebarLink href="https://google.com">Account</TailwindSidebarLink>
           </TailwindSidebarSubMenu>
         </TailwindRightSidebar>
         </TailwindRightSidebarProvider>
